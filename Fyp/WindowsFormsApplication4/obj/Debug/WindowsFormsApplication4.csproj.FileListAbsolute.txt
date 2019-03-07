@@ -10,3 +10,12 @@ C:\Users\Nimra\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\Wi
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Student.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Advisor.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Project.resources

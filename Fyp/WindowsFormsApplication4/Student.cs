@@ -8,25 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
 namespace WindowsFormsApplication4
 {
-    public partial class Form1 : Form
+    public partial class Student : Form
     {
-        public Form1()
+        public Student()
         {
             InitializeComponent();
         }
-        //kkkkkjkejjjjj
-        private void button1_Click(object sender, EventArgs e)
+
+        private void cmdInfo_Click(object sender, EventArgs e)
         {
-try
+            try
 
             {
-                
+
                 String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
 
-                String query = "INSERT INTO Person (FirstName,LastName,Contact,Email,DateOfBirth,Gender)VALUES(('" + (textBox2.Text).ToString() + "'),('" + (textBox3.Text).ToString() + "'),('" + (textBox4.Text).ToString() + "'),('" + (textBox5.Text).ToString() + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),(select Id from Lookup where Lookup.Value ='"+comboBox1.Text+"'));";
+                String query = "INSERT INTO Student (Id,RegistrationNo)VALUES((select MAX(Id) FROM Person),('" + (txtRegno.Text).ToString() + "'));";
 
                 SqlConnection con = new SqlConnection(str);
 
@@ -44,16 +43,11 @@ try
                 con.Close();
 
             }
-
             catch (Exception es)
-
             {
-
-                MessageBox.Show(es.Message);
-
- 
-
+               MessageBox.Show(es.Message);
             }
-        }
+        
+    }
     }
 }

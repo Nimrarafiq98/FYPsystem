@@ -11,22 +11,22 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form1 : Form
+    public partial class Project : Form
     {
-        public Form1()
+        public Project()
         {
             InitializeComponent();
         }
-        //kkkkkjkejjjjj
+
         private void button1_Click(object sender, EventArgs e)
         {
-try
+            try
 
             {
-                
+
                 String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
 
-                String query = "INSERT INTO Person (FirstName,LastName,Contact,Email,DateOfBirth,Gender)VALUES(('" + (textBox2.Text).ToString() + "'),('" + (textBox3.Text).ToString() + "'),('" + (textBox4.Text).ToString() + "'),('" + (textBox5.Text).ToString() + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),(select Id from Lookup where Lookup.Value ='"+comboBox1.Text+"'));";
+                String query = "INSERT INTO Project (Description,Title)VALUES(('" + (textBox1.Text).ToString() + "'),('" + (textBox2.Text).ToString() + "'));";
 
                 SqlConnection con = new SqlConnection(str);
 
@@ -37,10 +37,7 @@ try
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data insert");
-                Student Info = new Student();
-                this.Hide();
-                Info.Show();
-
+           
                 con.Close();
 
             }
@@ -51,7 +48,7 @@ try
 
                 MessageBox.Show(es.Message);
 
- 
+
 
             }
         }
