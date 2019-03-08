@@ -55,5 +55,43 @@ try
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+
+                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+
+                String query = "INSERT INTO Person (FirstName,LastName,Contact,Email,DateOfBirth,Gender)VALUES(('" + (textBox2.Text).ToString() + "'),('" + (textBox3.Text).ToString() + "'),('" + (textBox4.Text).ToString() + "'),('" + (textBox5.Text).ToString() + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),(select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "'));";
+
+                SqlConnection con = new SqlConnection(str);
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data insert");
+                Advisor Info = new Advisor();
+                this.Hide();
+                Info.Show();
+
+                con.Close();
+
+            }
+
+            catch (Exception es)
+
+            {
+
+                MessageBox.Show(es.Message);
+
+
+
+            }
+        }
     }
 }
