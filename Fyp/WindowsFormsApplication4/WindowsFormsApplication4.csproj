@@ -58,7 +58,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project Advisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Advisor.Designer.cs">
+      <DependentUpon>Project Advisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Project.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group.resx">
+      <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Advisor.resx">
+      <DependentUpon>Project Advisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Project.resx">
       <DependentUpon>Project.cs</DependentUpon>

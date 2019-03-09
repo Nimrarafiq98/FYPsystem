@@ -19,3 +19,5 @@ C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsF
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Advisor.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Project.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Project_Advisor.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Group.resources

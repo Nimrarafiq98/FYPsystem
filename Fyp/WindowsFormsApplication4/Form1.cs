@@ -93,5 +93,38 @@ try
 
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+
+                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+
+                String query = "SELECT * from Lookup;";
+               
+                SqlConnection con = new SqlConnection(str);
+
+                SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader Reader;
+
+
+
+
+                 con.Open();
+
+                Reader = cmd.ExecuteReader();
+                while (Reader.Read())
+                {
+                   
+                    comboBox1.Items.Add(Reader.GetString(2));
+                    
+
+                }
+            
+
+            }
+
+       
+        }
     }
-}
+
