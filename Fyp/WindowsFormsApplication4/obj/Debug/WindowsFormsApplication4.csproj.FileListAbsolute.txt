@@ -21,3 +21,7 @@ C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsF
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Project.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Project_Advisor.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Group.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.StudentShow.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Group_Project.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Evaluation.resources
+C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.GroupEvaluation.resources
