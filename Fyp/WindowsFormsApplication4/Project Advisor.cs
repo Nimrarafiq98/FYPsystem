@@ -21,7 +21,7 @@ namespace WindowsFormsApplication4
         {
             String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
 
-            String query = "select Firstname from Person join Advisor on Person.Id = Advisor.Id;";
+            String query = "select Id from Advisor";
 
             SqlConnection con = new SqlConnection(str);
 
@@ -37,7 +37,7 @@ namespace WindowsFormsApplication4
             while (Reader.Read())
             {
 
-                comboBox2.Items.Add(Reader.GetString(0));
+                comboBox2.Items.Add(Reader.GetInt32(0));
 
 
             }
@@ -75,20 +75,58 @@ namespace WindowsFormsApplication4
 
             {
 
+                //String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+
+                //String query = "INSERT INTO ProjectAdvisor (AdvisorId,ProjectId,AdvisorRole,AssignmentDate)VALUES((select Id from Person where Person.FirstName = '"+comboBox2.Text+ "'),(select Id from Project where Project.Title = '" + comboBox1.Text + "'),(select Id from Lookup where Lookup.Value ='" + comboBox3.Text + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'));";
+
+                //SqlConnection con = new SqlConnection(str);
+
+                //SqlCommand cmd = new SqlCommand(query, con);
+
+                //con.Open();
+
+                //cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data insert");
+
+                //con.Close();
+
+            }
+
+            catch (Exception es)
+
+            {
+
+                MessageBox.Show(es.Message);
+
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+
                 String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
 
-                String query = "INSERT INTO ProjectAdvisor (AdvisorId,ProjectId,AdvisorRole,AssignmentDate)VALUES((select Id from Person where Person.FirstName = '"+comboBox2.Text+ "'),(select Id from Project where Project.Title = '" + comboBox1.Text + "'),(select Id from Lookup where Lookup.Value ='" + comboBox3.Text + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'));";
+                String query = "INSERT INTO ProjectAdvisor (AdvisorId,ProjectId,AdvisorRole,AssignmentDate)VALUES(('" +Convert.ToInt32(     comboBox2.Text )+ "'),(select Id from Project where Project.Title = '" + comboBox1.Text + "'),(select Id from Lookup where Lookup.Value ='" + comboBox3.Text + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'));";
 
                 SqlConnection con = new SqlConnection(str);
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 con.Open();
+           
 
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data insert");
-
+               
+                comboBox3.Text = "--Select--";
+                comboBox2.Text = "--Select--";
                 con.Close();
 
             }

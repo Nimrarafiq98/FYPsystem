@@ -37,12 +37,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 63);
+            this.comboBox1.Location = new System.Drawing.Point(211, 48);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
@@ -50,7 +56,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(211, 126);
+            this.comboBox2.Location = new System.Drawing.Point(211, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 1;
@@ -62,7 +68,7 @@
             "Main Advisor",
             "Co-Advisror",
             "Industry Advisor"});
-            this.comboBox3.Location = new System.Drawing.Point(211, 184);
+            this.comboBox3.Location = new System.Drawing.Point(211, 198);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 2;
@@ -70,7 +76,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(211, 253);
+            this.dateTimePicker1.Location = new System.Drawing.Point(211, 252);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -78,54 +84,95 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.Location = new System.Drawing.Point(65, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Project Title";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 134);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label2.Location = new System.Drawing.Point(50, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Advisor Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 192);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Location = new System.Drawing.Point(50, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Advisor Role";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 260);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.Location = new System.Drawing.Point(50, 253);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.Size = new System.Drawing.Size(143, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Assignmemt Date";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(292, 296);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button1.Location = new System.Drawing.Point(618, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.Size = new System.Drawing.Size(162, 30);
             this.button1.TabIndex = 8;
             this.button1.Text = "Assign Advisor";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(398, 34);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(392, 195);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button2.Location = new System.Drawing.Point(123, 291);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 28);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "OK";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label5.Location = new System.Drawing.Point(149, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Select Adivisors";
+            // 
             // Project_Advisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 331);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(802, 399);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -138,6 +185,7 @@
             this.Name = "Project_Advisor";
             this.Text = "Project_Advisor";
             this.Load += new System.EventHandler(this.Project_Advisor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +202,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }

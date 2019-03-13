@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using System.Data.SqlClient;
 namespace WindowsFormsApplication4
 {
-    public partial class Advisor : Form
+    public partial class editevaluation : Form
     {
-        public Advisor()
+        public editevaluation()
         {
             InitializeComponent();
         }
@@ -20,32 +21,23 @@ namespace WindowsFormsApplication4
         private void button1_Click(object sender, EventArgs e)
         {
             try
-
             {
-
+                int key = Convert.ToInt32(textBox1.Text);
                 String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
-                String query = "INSERT INTO Advisor (Id,Designation,Salary)VALUES(('"+Convert.ToInt32(textBox2.Text)+"'),(select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "'),('"+Convert.ToDecimal(textBox1.Text)+"'));";
-                 SqlConnection con = new SqlConnection(str);
-                 SqlCommand cmd = new SqlCommand(query, con);
-                  con.Open();
+                String query = "Update Evaluation Set Name = ('" + textBox2.Text.ToString() + "'),  TotalMarks=('" + Convert.ToInt32(textBox3.Text) + "'),TotalWeightage=('" + Convert.ToInt32(textBox4.Text) + "')where Id = '" + Convert.ToInt32(textBox1.Text) + "';";
+                SqlConnection con = new SqlConnection(str);
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Data insert");
-            
+                MessageBox.Show("Data Updated");
+
 
                 con.Close();
-
             }
             catch (Exception es)
             {
                 MessageBox.Show(es.Message);
             }
-
-
-        }
-
-        private void Advisor_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
