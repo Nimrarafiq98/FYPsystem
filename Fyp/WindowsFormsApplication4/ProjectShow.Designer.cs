@@ -35,14 +35,13 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -148,30 +147,45 @@
             this.panel1.Size = new System.Drawing.Size(765, 365);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // tableLayoutPanel4
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(143, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.37872F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.88235F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.43137F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.24739F));
+            this.tableLayoutPanel4.Controls.Add(this.textBox1, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.textBox2, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.textBox3, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.button1, 2, 3);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.35616F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.78082F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(765, 365);
+            this.tableLayoutPanel4.TabIndex = 11;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(404, 3);
+            this.textBox1.Location = new System.Drawing.Point(341, 3);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 39);
+            this.textBox1.Size = new System.Drawing.Size(288, 39);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(404, 276);
+            this.button1.Location = new System.Drawing.Point(341, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 46);
             this.button1.TabIndex = 7;
@@ -213,46 +227,20 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(404, 94);
+            this.textBox2.Location = new System.Drawing.Point(341, 94);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 39);
+            this.textBox2.Size = new System.Drawing.Size(288, 39);
             this.textBox2.TabIndex = 4;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.37872F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.32056F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.31359F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.24739F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.textBox1, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox3, 2, 2);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(765, 365);
-            this.tableLayoutPanel4.TabIndex = 11;
             // 
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(404, 185);
+            this.textBox3.Location = new System.Drawing.Point(341, 185);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 39);
+            this.textBox3.Size = new System.Drawing.Size(288, 39);
             this.textBox3.TabIndex = 9;
             // 
             // ProjectShow
@@ -289,7 +277,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;

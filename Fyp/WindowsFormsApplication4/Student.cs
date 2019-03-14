@@ -36,7 +36,7 @@ namespace WindowsFormsApplication4
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data insert");
-                Student Info = new Student();
+                infoStudent Info = new infoStudent();
                 this.Hide();
                 Info.Show();
 
@@ -49,5 +49,15 @@ namespace WindowsFormsApplication4
             }
         
     }
+
+        private void lblregNo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRegno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

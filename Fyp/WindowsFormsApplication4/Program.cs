@@ -16,7 +16,7 @@ namespace WindowsFormsApplication4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Evaluationshow());
+            Application.Run(new Home());
         }
     }
 }

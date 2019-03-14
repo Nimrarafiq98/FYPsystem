@@ -24,13 +24,13 @@ namespace WindowsFormsApplication4
             chk.HeaderText = "Edit";
             chk.Name = "Edit Student";
             chk.Text = "Edit";
-          
+
             DataGridViewButtonColumn chk1 = new DataGridViewButtonColumn();
             chk1.HeaderText = "Delete";
             chk1.Name = "Delete Student";
-           
+
             chk1.Text = "Delete";
-          
+
             String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
             SqlConnection con = new SqlConnection(str);
             con.Open();
@@ -99,9 +99,9 @@ namespace WindowsFormsApplication4
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form1 newstud = new Form1();
+            Form1 ne = new Form1();
             this.Hide();
-            newstud.Show();
+            ne.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,8 +116,6 @@ namespace WindowsFormsApplication4
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Updated");
-
-
                 con.Close();
                 panel1.Hide();
                 infoStudent ne = new infoStudent();
@@ -128,6 +126,24 @@ namespace WindowsFormsApplication4
             {
                 MessageBox.Show(es.Message);
             }
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+               
+          
+
+
+        }
+
+        private void cmdInfo_Click(object sender, EventArgs e)
+        {
         }
     }
 }
