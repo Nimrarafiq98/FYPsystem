@@ -33,7 +33,9 @@ namespace WindowsFormsApplication4
             
 
                 con.Close();
-
+                Form3 showad = new Form3();
+                this.Hide();
+                showad.Show();
             }
             catch (Exception es)
             {

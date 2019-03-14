@@ -24,8 +24,8 @@ namespace WindowsFormsApplication4
 
         private void Form3_Load(object sender, EventArgs e)
         {
-           
 
+            panel1.Hide();
             DataGridViewButtonColumn chk = new DataGridViewButtonColumn();
             chk.HeaderText = "Edit";
             chk.Name = "Edit Advisor";
@@ -73,23 +73,18 @@ namespace WindowsFormsApplication4
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Advisor is deleted");
-                    String str1 = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
-                    SqlConnection con1 = new SqlConnection(str1);
-                    con1.Open();
-                    SqlDataAdapter sqlda = new SqlDataAdapter("select * from Advisor", con1);
-
-                    DataTable dtl1 = new DataTable();
-                    sqlda.Fill(dtl1);
-                    dataGridView1.DataSource = dtl1;
-
+                    Form3 ne = new Form3();
+                    this.Hide();
+                    ne.Show();
                 }
                 if (e.RowIndex >= 0 && e.ColumnIndex == 3)
                 {
-                    Edit_Advisor edit = new Edit_Advisor();
-                    edit.textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    edit.textBox2.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
-                    edit.Show();
+                    //Edit_Advisor edit = new Edit_Advisor();
+                    panel1.Show();
+                    textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    textBox2.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    comboBox1.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    //edit.Show();
                 }
             }
             catch (Exception es)
@@ -104,6 +99,32 @@ namespace WindowsFormsApplication4
             Advisor ad = new Advisor();
             this.Hide();
             ad.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int key = Convert.ToInt32(textBox1.Text);
+                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+                String query = "Update Advisor Set Designation = (select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "'),Salary=('" + Convert.ToDecimal(textBox2.Text) + "')where Id = '" + Convert.ToInt32(textBox1.Text) + "';";
+                SqlConnection con = new SqlConnection(str);
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Updated");
+
+
+                con.Close();
+                panel1.Hide();
+                Form3 ne = new Form3();
+                this.Hide();
+                ne.Show();
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.Message);
+            }
         }
     }
 }

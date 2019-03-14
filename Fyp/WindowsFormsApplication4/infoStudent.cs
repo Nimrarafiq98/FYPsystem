@@ -19,6 +19,7 @@ namespace WindowsFormsApplication4
 
         private void infoStudent_Load(object sender, EventArgs e)
         {
+            panel1.Hide();
             DataGridViewButtonColumn chk = new DataGridViewButtonColumn();
             chk.HeaderText = "Edit";
             chk.Name = "Edit Student";
@@ -70,28 +71,58 @@ namespace WindowsFormsApplication4
                     SqlCommand cmd2 = new SqlCommand(query2, con);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("Student is deleted");
-                    String str1 = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
-                    SqlConnection con1 = new SqlConnection(str1);
-                    con1.Open();
-                    SqlDataAdapter sqlda = new SqlDataAdapter("Select Person.Id,Student.RegistrationNo,Person.FirstName,Person.LastName,Person.Contact,Person.DateOfBirth,Person.Email,Person.Gender from Student join Person on Student.Id =Person.Id;", con1);
+                    infoStudent ne = new infoStudent();
+                    this.Hide();
+                    ne.Show();
 
-                    DataTable dtl1 = new DataTable();
-                    sqlda.Fill(dtl1);
-                    dataGridView1.DataSource = dtl1;
 
                 }
                 if (e.RowIndex >= 0 && e.ColumnIndex == 8)
                 {
-                    Editstudent edit = new Editstudent();
-                    edit.textBox5.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    edit.textBox1.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                    edit.textBox2.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                    edit.textBox3.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                    edit.textBox4.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                   edit.dateTimePicker1.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                    edit.comboBox1.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                    edit.Show();
+                    //Editstudent edit = new Editstudent();
+                    panel1.Show();
+                    textBox5.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    textBox1.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    textBox2.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    textBox3.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                    textBox4.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                    dateTimePicker1.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                    comboBox1.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                    //edit.Show();
                 }
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.Message);
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 newstud = new Form1();
+            this.Hide();
+            newstud.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int key = Convert.ToInt32(textBox5.Text);
+                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+                String query = "Update Person Set  FirstName=('" + textBox1.Text.ToString() + "'),LastName=('" + textBox2.Text.ToString() + "'),Contact=('" + textBox3.Text.ToString() + "'),Email=('" + textBox4.Text.ToString() + "'),DateOfBirth=('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),Gender=(select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "') where Id = '" + Convert.ToInt32(textBox5.Text) + "';";
+                SqlConnection con = new SqlConnection(str);
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Updated");
+
+
+                con.Close();
+                panel1.Hide();
+                infoStudent ne = new infoStudent();
+                this.Hide();
+                ne.Show();
             }
             catch (Exception es)
             {

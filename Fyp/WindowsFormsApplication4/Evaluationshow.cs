@@ -19,6 +19,7 @@ namespace WindowsFormsApplication4
 
         private void Evaluationshow_Load(object sender, EventArgs e)
         {
+            panel1.Hide();
             DataGridViewButtonColumn chk = new DataGridViewButtonColumn();
             chk.HeaderText = "Edit";
             chk.Name = "Edit Advisor";
@@ -60,26 +61,55 @@ namespace WindowsFormsApplication4
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Evaluation Record is deleted");
-                    String str1 = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
-                    SqlConnection con1 = new SqlConnection(str1);
-                    con1.Open();
-                    SqlDataAdapter sqlda = new SqlDataAdapter("select * from Evaluation", con1);
-
-                    DataTable dtl1 = new DataTable();
-                    sqlda.Fill(dtl1);
-                    dataGridView1.DataSource = dtl1;
+                    Evaluationshow ne = new Evaluationshow();
+                    this.Hide();
+                    ne.Show();
 
                 }
                 if (e.RowIndex >= 0 && e.ColumnIndex == 4)
                 {
-                    editevaluation edit = new editevaluation();
-                    edit.textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    edit.textBox2.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                    edit.textBox3.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                    edit.textBox4.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    //editevaluation edit = new editevaluation();
+                    panel1.Show();
+                   textBox1.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                   textBox2.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                   textBox3.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                   textBox4.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
-                    edit.Show();
+                    //edit.Show();
                 }
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.Message);
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Evaluation eva = new Evaluation();
+            this.Hide();
+            eva.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int key = Convert.ToInt32(textBox1.Text);
+                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+                String query = "Update Evaluation Set Name = ('" + textBox2.Text.ToString() + "'),  TotalMarks=('" + Convert.ToInt32(textBox3.Text) + "'),TotalWeightage=('" + Convert.ToInt32(textBox4.Text) + "')where Id = '" + Convert.ToInt32(textBox1.Text) + "';";
+                SqlConnection con = new SqlConnection(str);
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Updated");
+
+
+                con.Close();
+                panel1.Hide();
+                Evaluationshow ne = new Evaluationshow();
+                this.Hide();
+                ne.Show();
             }
             catch (Exception es)
             {

@@ -40,6 +40,9 @@ namespace WindowsFormsApplication4
            
                 con.Close();
 
+                ProjectShow sho = new ProjectShow();
+                this.Hide();
+                sho.Show();
             }
 
             catch (Exception es)

@@ -37,6 +37,9 @@ namespace WindowsFormsApplication4
                 MessageBox.Show("Data Inserted");
 
                 con.Close();
+                Evaluationshow evashow = new Evaluationshow();
+                this.Hide();
+                evashow.Show();
 
             }
 

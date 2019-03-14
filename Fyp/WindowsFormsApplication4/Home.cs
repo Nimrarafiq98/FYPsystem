@@ -34,28 +34,28 @@ namespace WindowsFormsApplication4
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form1 Peron = new Form1();
+            infoStudent Peron = new infoStudent();
             this.Hide();
             Peron.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Form1 Peron = new Form1();
+            infoStudent Peron = new infoStudent();
             this.Hide();
             Peron.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Project pro = new Project();
+            ProjectShow pro = new ProjectShow();
             this.Hide();
             pro.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Project pro = new Project();
+            ProjectShow pro = new ProjectShow();
             this.Hide();
             pro.Show();
         }
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication4
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Evaluation eva = new Evaluation();
+            Evaluationshow eva = new Evaluationshow();
             this.Hide();
             eva.Show();
         }
@@ -77,9 +77,16 @@ namespace WindowsFormsApplication4
         private void label2_Click(object sender, EventArgs e)
         {
 
-            Evaluation eva = new Evaluation();
+            Evaluationshow eva = new Evaluationshow();
             this.Hide();
             eva.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Group group = new Group();
+            this.Hide();
+            group.Show();
         }
     }
 }

@@ -44,5 +44,10 @@ namespace WindowsFormsApplication4
                 MessageBox.Show(es.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

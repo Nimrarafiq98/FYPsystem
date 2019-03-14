@@ -62,24 +62,27 @@ try
 
             {
 
-                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+                //    String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
 
-                String query = "INSERT INTO Person (FirstName,LastName,Contact,Email,DateOfBirth,Gender)VALUES(('" + (textBox2.Text).ToString() + "'),('" + (textBox3.Text).ToString() + "'),('" + (textBox4.Text).ToString() + "'),('" + (textBox5.Text).ToString() + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),(select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "'));";
+                //    String query = "INSERT INTO Person (FirstName,LastName,Contact,Email,DateOfBirth,Gender)VALUES(('" + (textBox2.Text).ToString() + "'),('" + (textBox3.Text).ToString() + "'),('" + (textBox4.Text).ToString() + "'),('" + (textBox5.Text).ToString() + "'),('" + Convert.ToDateTime(dateTimePicker1.Text) + "'),(select Id from Lookup where Lookup.Value ='" + comboBox1.Text + "'));";
 
-                SqlConnection con = new SqlConnection(str);
+                //    SqlConnection con = new SqlConnection(str);
 
-                SqlCommand cmd = new SqlCommand(query, con);
+                //    SqlCommand cmd = new SqlCommand(query, con);
 
-                con.Open();
+                //    con.Open();
 
-                cmd.ExecuteNonQuery();
+                //    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Data insert");
-                Advisor Info = new Advisor();
+                //    MessageBox.Show("Data insert");
+                //    Advisor Info = new Advisor();
+                //    this.Hide();
+                //    Info.Show();
+
+                //    con.Close();
+                infoStudent show = new infoStudent();
                 this.Hide();
-                Info.Show();
-
-                con.Close();
+                show.Show();
 
             }
 
