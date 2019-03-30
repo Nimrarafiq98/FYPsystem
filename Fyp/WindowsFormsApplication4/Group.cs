@@ -42,5 +42,10 @@ namespace WindowsFormsApplication4
             }
 
         }
+
+        private void Group_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

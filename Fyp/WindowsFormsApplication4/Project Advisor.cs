@@ -123,8 +123,18 @@ namespace WindowsFormsApplication4
 
                 cmd.ExecuteNonQuery();
 
+
                 MessageBox.Show("Data insert");
-               
+
+                String str1 = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
+                SqlConnection con1 = new SqlConnection(str1);
+                con1.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("Select AdvisorId,AdvisorRole from ProjectAdvisor where ProjectId = (Select Id from Project where Title = '"+comboBox1.Text+"');", con1);
+
+                DataTable dtl = new DataTable();
+                sqlda.Fill(dtl);
+                dataGridView1.DataSource = dtl;
+
                 comboBox3.Text = "--Select--";
                 comboBox2.Text = "--Select--";
                 con.Close();
@@ -140,6 +150,11 @@ namespace WindowsFormsApplication4
 
 
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

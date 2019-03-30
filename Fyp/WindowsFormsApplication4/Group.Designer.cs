@@ -89,6 +89,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Group";
             this.Text = "Group";
+            this.Load += new System.EventHandler(this.Group_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

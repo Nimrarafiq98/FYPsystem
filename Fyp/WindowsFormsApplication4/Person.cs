@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form1 : Form
+    public partial class Person : Form
     {
-        public Form1()
+        public Person()
         {
             InitializeComponent();
         }
@@ -101,28 +101,11 @@ try
         {
            
 
-                String str = "Data Source=HAIER-PC\\NIMRASQLSERVER;Initial Catalog=ProjectA;Integrated Security=True";
-
-                String query = "SELECT * from Lookup;";
-               
-                SqlConnection con = new SqlConnection(str);
-
-                SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader Reader;
+                
 
 
 
-
-                 con.Open();
-
-                Reader = cmd.ExecuteReader();
-                while (Reader.Read())
-                {
-                   
-                    comboBox1.Items.Add(Reader.GetString(2));
-                    
-
-                }
+            
             
 
             }

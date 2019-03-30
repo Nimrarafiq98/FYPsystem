@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication4
 {
-    partial class Form1
+    partial class Person
     {
         /// <summary>
         /// Required designer variable.

@@ -99,7 +99,7 @@ namespace WindowsFormsApplication4
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form1 ne = new Form1();
+            Person ne = new Person();
             this.Hide();
             ne.Show();
         }
