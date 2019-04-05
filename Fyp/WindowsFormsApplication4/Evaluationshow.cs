@@ -61,7 +61,7 @@ namespace WindowsFormsApplication4
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Evaluation Record is deleted");
-                    Evaluationshow ne = new Evaluationshow();
+                    evaluationHome ne = new evaluationHome();
                     this.Hide();
                     ne.Show();
 
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication4
 
                 con.Close();
                 panel1.Hide();
-                Evaluationshow ne = new Evaluationshow();
+                evaluationHome ne = new evaluationHome();
                 this.Hide();
                 ne.Show();
             }

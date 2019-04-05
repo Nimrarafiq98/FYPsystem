@@ -40,7 +40,7 @@ namespace WindowsFormsApplication4
            
                 con.Close();
 
-                ProjectShow sho = new ProjectShow();
+                ProjectHome sho = new ProjectHome();
                 this.Hide();
                 sho.Show();
             }
@@ -54,6 +54,11 @@ namespace WindowsFormsApplication4
 
 
             }
+        }
+
+        private void Project_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

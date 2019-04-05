@@ -19,7 +19,7 @@ namespace WindowsFormsApplication4
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Form3 adv = new Form3();
+            AdvisorHome adv = new AdvisorHome();
             this.Hide();
             adv.Show();
         }
@@ -27,49 +27,49 @@ namespace WindowsFormsApplication4
         private void label5_Click(object sender, EventArgs e)
         {
 
-            Form3 adv = new Form3();
+            AdvisorHome adv = new AdvisorHome();
             this.Hide();
             adv.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            infoStudent Peron = new infoStudent();
+            StudenHome Peron = new StudenHome();
             this.Hide();
             Peron.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            infoStudent Peron = new infoStudent();
+            StudenHome Peron = new StudenHome();
             this.Hide();
             Peron.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ProjectShow pro = new ProjectShow();
+            ProjectHome pro = new ProjectHome();
             this.Hide();
             pro.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            ProjectShow pro = new ProjectShow();
+            ProjectHome pro = new ProjectHome();
             this.Hide();
             pro.Show();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Group group = new Group();
+            GroupHome group = new GroupHome();
             this.Hide();
             group.Show();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Evaluationshow eva = new Evaluationshow();
+            evaluationHome eva = new evaluationHome();
             this.Hide();
             eva.Show();
         }
@@ -77,16 +77,36 @@ namespace WindowsFormsApplication4
         private void label2_Click(object sender, EventArgs e)
         {
 
-            Evaluationshow eva = new Evaluationshow();
+          evaluationHome eva = new evaluationHome();
             this.Hide();
             eva.Show();
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Group group = new Group();
+            GroupHome group = new GroupHome();
             this.Hide();
             group.Show();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

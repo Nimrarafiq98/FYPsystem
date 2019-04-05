@@ -71,7 +71,7 @@ namespace WindowsFormsApplication4
                     cmd.ExecuteNonQuery();
                    
                     MessageBox.Show("Project is deleted");
-                    ProjectShow ne = new ProjectShow();
+                    ProjectHome ne = new ProjectHome();
                     this.Hide();
                     ne.Show();
 
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication4
 
                 con1.Close();
               
-                ProjectShow ne = new ProjectShow();
+                ProjectHome ne = new ProjectHome();
                 this.Hide();
                 ne.Show();
 
@@ -140,6 +140,11 @@ namespace WindowsFormsApplication4
             {
                 MessageBox.Show(es.Message);
             }
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

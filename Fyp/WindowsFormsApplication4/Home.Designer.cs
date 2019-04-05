@@ -64,6 +64,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -75,6 +76,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1187, 80);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Tag = "jhdj";
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label1
             // 
@@ -89,6 +91,7 @@
             this.label1.Size = new System.Drawing.Size(558, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome TO FYP System";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -117,6 +120,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1187, 113);
             this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label5
             // 

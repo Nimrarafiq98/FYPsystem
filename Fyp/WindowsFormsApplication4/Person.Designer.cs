@@ -193,10 +193,11 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Gender";
             // 
-            // Form1
+            // Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 338);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -212,7 +213,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Name = "Form1";
+            this.Name = "Person";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

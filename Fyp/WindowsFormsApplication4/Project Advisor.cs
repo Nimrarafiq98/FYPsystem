@@ -88,6 +88,9 @@ namespace WindowsFormsApplication4
                 //cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data insert");
+                GroupHome grhm = new GroupHome();
+                this.Hide();
+                grhm.Show();
 
                 //con.Close();
 

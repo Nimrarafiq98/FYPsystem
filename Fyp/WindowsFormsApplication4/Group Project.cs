@@ -66,6 +66,13 @@ namespace WindowsFormsApplication4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+
             try
 
             {
@@ -97,6 +104,20 @@ namespace WindowsFormsApplication4
 
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GroupHome GRHM = new GroupHome();
+            this.Hide();
+            GRHM.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Project_Advisor PRAD = new Project_Advisor();
+            this.Hide();
+            PRAD.Show();
         }
     }
     }

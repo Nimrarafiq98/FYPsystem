@@ -64,14 +64,14 @@ namespace WindowsFormsApplication4
                     String query = "Delete from Student where Id = '" + row.Cells[0].Value + "';";
                     String query1 = "Delete from Person where Id = '" + row.Cells[0].Value + "';";
                     String query2 = "Delete from GroupStudent where StudentId = '" + row.Cells[0].Value + "';";
-                    SqlCommand cmd = new SqlCommand(query, con);
+                    SqlCommand cmd = new SqlCommand(query2, con);
                     cmd.ExecuteNonQuery();
-                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                    SqlCommand cmd1 = new SqlCommand(query, con);
                     cmd1.ExecuteNonQuery();
-                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    SqlCommand cmd2 = new SqlCommand(query1, con);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("Student is deleted");
-                    infoStudent ne = new infoStudent();
+                    StudenHome ne = new StudenHome();
                     this.Hide();
                     ne.Show();
 
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication4
                 MessageBox.Show("Data Updated");
                 con.Close();
                 panel1.Hide();
-                infoStudent ne = new infoStudent();
+                StudenHome ne = new StudenHome();
                 this.Hide();
                 ne.Show();
             }

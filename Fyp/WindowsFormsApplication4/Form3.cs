@@ -69,11 +69,14 @@ namespace WindowsFormsApplication4
                 if (e.RowIndex >= 0 && e.ColumnIndex == 4)
                 {
                     DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                    String query = "Delete from Advisor where Id = '" + row.Cells[0].Value + "';";
+                    String query = "Delete from ProjectAdvisor where AdvisorId = '" + row.Cells[0].Value + "';";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
+                    String query1 = "Delete from Advisor where Id = '" + row.Cells[0].Value + "';";
+                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                    cmd1.ExecuteNonQuery();
                     MessageBox.Show("Advisor is deleted");
-                    Form3 ne = new Form3();
+                    AdvisorHome ne = new AdvisorHome();
                     this.Hide();
                     ne.Show();
                 }
@@ -117,7 +120,7 @@ namespace WindowsFormsApplication4
 
                 con.Close();
                 panel1.Hide();
-                Form3 ne = new Form3();
+                AdvisorHome ne = new AdvisorHome();
                 this.Hide();
                 ne.Show();
             }

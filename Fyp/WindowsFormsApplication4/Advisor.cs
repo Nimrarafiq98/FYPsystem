@@ -33,7 +33,7 @@ namespace WindowsFormsApplication4
             
 
                 con.Close();
-                Form3 showad = new Form3();
+                AdvisorHome showad = new AdvisorHome();
                 this.Hide();
                 showad.Show();
             }
@@ -47,7 +47,7 @@ namespace WindowsFormsApplication4
 
         private void Advisor_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

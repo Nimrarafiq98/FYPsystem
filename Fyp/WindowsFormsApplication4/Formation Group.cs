@@ -46,6 +46,14 @@ namespace WindowsFormsApplication4
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            Group_Project grpr = new Group_Project();
+            this.Hide();
+            grpr.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
             try
 
             {
@@ -87,7 +95,13 @@ namespace WindowsFormsApplication4
                 }
             }
             MessageBox.Show("students selected for group");
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GroupHome grhm = new GroupHome();
+            this.Hide();
+            grhm.Show();
         }
     }
 }

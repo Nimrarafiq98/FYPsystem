@@ -36,7 +36,7 @@ namespace WindowsFormsApplication4
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Data insert");
-                infoStudent Info = new infoStudent();
+                StudenHome Info = new StudenHome();
                 this.Hide();
                 Info.Show();
 

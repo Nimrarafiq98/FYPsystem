@@ -57,7 +57,7 @@
             // cmdInfo
             // 
             this.cmdInfo.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdInfo.Location = new System.Drawing.Point(182, 169);
+            this.cmdInfo.Location = new System.Drawing.Point(181, 174);
             this.cmdInfo.Name = "cmdInfo";
             this.cmdInfo.Size = new System.Drawing.Size(223, 47);
             this.cmdInfo.TabIndex = 2;
@@ -79,6 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(577, 327);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdInfo);

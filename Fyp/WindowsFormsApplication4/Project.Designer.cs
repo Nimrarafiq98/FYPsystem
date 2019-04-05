@@ -94,6 +94,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Project";
             this.Text = "Project";
+            this.Load += new System.EventHandler(this.Project_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

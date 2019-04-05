@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,35 +59,29 @@
     <Compile Include="Advisor.Designer.cs">
       <DependentUpon>Advisor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit Advisor.cs">
+    <Compile Include="AdvisorHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit Advisor.Designer.cs">
-      <DependentUpon>Edit Advisor.cs</DependentUpon>
+    <Compile Include="AdvisorHome.Designer.cs">
+      <DependentUpon>AdvisorHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="editevaluation.cs">
+    <Compile Include="EditGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editevaluation.Designer.cs">
-      <DependentUpon>editevaluation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editproject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editproject.Designer.cs">
-      <DependentUpon>Editproject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editstudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editstudent.Designer.cs">
-      <DependentUpon>Editstudent.cs</DependentUpon>
+    <Compile Include="EditGroup.Designer.cs">
+      <DependentUpon>EditGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Evaluation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Evaluation.Designer.cs">
       <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="evaluationHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="evaluationHome.Designer.cs">
+      <DependentUpon>evaluationHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Evaluationshow.cs">
       <SubType>Form</SubType>
@@ -94,17 +95,23 @@
     <Compile Include="Formation Group.Designer.cs">
       <DependentUpon>Formation Group.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupHome.Designer.cs">
+      <DependentUpon>GroupHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groupinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groupinfo.Designer.cs">
+      <DependentUpon>Groupinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Person.Designer.cs">
       <DependentUpon>Person.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -160,6 +167,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProjectHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectHome.Designer.cs">
+      <DependentUpon>ProjectHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectShow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,35 +180,44 @@
       <DependentUpon>ProjectShow.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudenHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudenHome.Designer.cs">
+      <DependentUpon>StudenHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentShow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentShow.Designer.cs">
-      <DependentUpon>StudentShow.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Advisor.resx">
       <DependentUpon>Advisor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit Advisor.resx">
-      <DependentUpon>Edit Advisor.cs</DependentUpon>
+    <EmbeddedResource Include="AdvisorHome.resx">
+      <DependentUpon>AdvisorHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editevaluation.resx">
-      <DependentUpon>editevaluation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editproject.resx">
-      <DependentUpon>Editproject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editstudent.resx">
-      <DependentUpon>Editstudent.cs</DependentUpon>
+    <EmbeddedResource Include="EditGroup.resx">
+      <DependentUpon>EditGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Evaluation.resx">
       <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="evaluationHome.resx">
+      <DependentUpon>evaluationHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Evaluationshow.resx">
       <DependentUpon>Evaluationshow.cs</DependentUpon>
@@ -203,11 +225,14 @@
     <EmbeddedResource Include="Formation Group.resx">
       <DependentUpon>Formation Group.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupHome.resx">
+      <DependentUpon>GroupHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groupinfo.resx">
+      <DependentUpon>Groupinfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Person.resx">
       <DependentUpon>Person.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -233,6 +258,9 @@
     <EmbeddedResource Include="Project.resx">
       <DependentUpon>Project.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectHome.resx">
+      <DependentUpon>ProjectHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectShow.resx">
       <DependentUpon>ProjectShow.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,12 +273,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudenHome.resx">
+      <DependentUpon>StudenHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentShow.resx">
-      <DependentUpon>StudentShow.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="ProjectADataSet.xsc">
       <DependentUpon>ProjectADataSet.xsd</DependentUpon>
     </None>
