@@ -24,13 +24,10 @@ C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsF
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Evaluation.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.GroupEvaluation.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Home.resources
-C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form2.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form3.resources
-C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Edit_Advisor.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.infoStudent.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.ProjectShow.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Evaluationshow.resources
-C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.editevaluation.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Person.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Formation_Group.resources
 C:\Users\Nimra\Desktop\FYPsystem\Fyp\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Groupinfo.resources

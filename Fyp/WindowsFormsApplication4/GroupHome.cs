@@ -123,5 +123,12 @@ namespace WindowsFormsApplication4
             this.Hide();
             rep.Show();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            GroupEvaluation rep = new GroupEvaluation();
+            this.Hide();
+            rep.Show();
+        }
     }
 }
